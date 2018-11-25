@@ -141,13 +141,7 @@ if(!isset($_SESSION['admin'])){
 				</div>
 			</div>			
 
-			<footer class="footer">
-				<div class="container-fluid">
-					<p class="copyright pull-right">
-						&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Hackers Inc</a>, made with love for a better web
-					</p>
-				</div>
-			</footer>
+			<?php require "footer.html"; ?>
 
 
 		</div>

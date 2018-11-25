@@ -51,8 +51,8 @@ if(!isset($_SESSION['admin'])){
 					    <span class="icon-bar"></span>
 					    <span class="icon-bar"></span>
 					    <span class="icon-bar"></span>
-					</button>                 
-						<a class="navbar-brand" href="#">All Images</a>
+					</button>               
+						<a class="navbar-brand" href="#">All Messages</a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">
@@ -69,7 +69,7 @@ if(!isset($_SESSION['admin'])){
 			
 			<?php
 			require "../init.php";
-			$sql = "SELECT * FROM eventimages ORDER BY eventId";
+			$sql = "SELECT * FROM contact";
 			$res = mysqli_query($con, $sql);
 			?>
 
@@ -81,19 +81,25 @@ if(!isset($_SESSION['admin'])){
 							<table class="table table-striped table-bordered">
 								<thead class="thead-dark">
 								<tr>
-									<th>ID</th>
-									<th>Source Image</th>
-									<th>EventID</th>
-									<th></th>
+									<th>#</th>
+									<th>Date</th>
+									<th>Name</th>
+									<th>Email</th>
+									<th>Subject</th>
+									<th>Message</th>
+									<th> &nbsp;</th>
 								</tr>
 								</thead>
 								<?php
 								while($row=mysqli_fetch_assoc($res)){
 									echo "<tr>";
 									echo "<td>".$row['id']."</td>";
-									echo "<td><a href=\"".$row['srcimg']."\">Open Image</a></td>";
-									echo "<td>".$row['eventId']."</td>";
-									echo "<td><a href=\"removeEvent.php?table=eventimages&id=".$row['id']."\">Remove</a></td>";
+									echo "<td>".$row['msgDate']."</td>";
+									echo "<td>".$row['name']."</td>";
+									echo "<td>".$row['email']."</td>";
+									echo "<td>".$row['subject']."</td>";
+									echo "<td>".$row['msg']."</td>";
+									echo "<td><a href=\"removeEvent.php?table=contact&id=".$row['id']."\">Delete Message</a></td>";
 									echo "</tr>";
 								}
 								?>
@@ -103,6 +109,7 @@ if(!isset($_SESSION['admin'])){
 					</div>
 				</div>
 			</div>			
+
 			<?php require "footer.html"; ?>
 
 

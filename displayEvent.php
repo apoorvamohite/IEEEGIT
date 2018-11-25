@@ -97,7 +97,7 @@ if(!isset($_SESSION['admin'])){
 									echo "<td>".$row['name']."</td>";
 									echo "<td>".$row['eventDate']."</td>";
 									echo "<td>".$row['description']."</td>";
-									echo "<td><a href=\"".$row['pic']."\">Picture</a></td>";
+									echo "<td><a href=\"".$row['pic']."\">Open Picture</a></td>";
 									echo "<td>".$row['link']."</td>";
 									echo "<td><a href=\"removeEvent.php?table=events&id=".$row['id']."\">Remove</a></td>";
 									echo "</tr>";
@@ -110,13 +110,7 @@ if(!isset($_SESSION['admin'])){
 				</div>
 			</div>			
 
-			<footer class="footer">
-				<div class="container-fluid">
-					<p class="copyright pull-right">
-						&copy; <script>document.write(new Date().getFullYear())</script> <a href="hackersinc.html">Hackers Inc</a>, made with love for a better web
-					</p>
-				</div>
-			</footer>
+			<?php require "footer.html"; ?>
 
 
 		</div>

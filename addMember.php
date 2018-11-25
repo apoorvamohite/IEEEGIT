@@ -51,7 +51,7 @@ if(!isset($_SESSION['admin'])){
                    <span class="icon-bar"></span>
                    <span class="icon-bar"></span>
                </button>               
-                <a class="navbar-brand" href="#">All Events</a>
+                <a class="navbar-brand" href="#">Add Member</a>
                </div>
                 <div class="collapse navbar-collapse">                    
                     <ul class="nav navbar-nav navbar-right">                        
@@ -147,13 +147,7 @@ if(!isset($_SESSION['admin'])){
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Hackers Inc</a>, made with love for a better web
-                </p>
-            </div>
-        </footer>
+        <?php require "footer.html"; ?>
 
 
     </div>
