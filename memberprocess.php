@@ -16,4 +16,5 @@
 	$link=$url.$tfile;
 	$sql = "INSERT INTO boardmembers(name, post, pic, year) VALUES('$mem_name', '$mem_post', '$link', '$mem_year')";
 	mysqli_query($con, $sql);
+	header("Location: addMember.php?success=true");
 ?>
