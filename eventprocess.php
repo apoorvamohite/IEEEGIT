@@ -8,7 +8,7 @@ $eventlink = $_POST['link'];
 $imglink = "";
 if(isset($_FILES['image'])){
 	$flag =0;
-	$url = "../img/event/";
+	$url = "img/event/";
 	$tfile = $_FILES["image"]["name"];
 	$tempname = $_FILES['image']['tmp_name'];
 	$target_path = "../img/event/".$tfile;

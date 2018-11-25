@@ -97,7 +97,7 @@ if(!isset($_SESSION['admin'])){
 									echo "<td>".$row['name']."</td>";
 									echo "<td>".$row['eventDate']."</td>";
 									echo "<td>".$row['description']."</td>";
-									echo "<td><a href=\"".$row['pic']."\">Open Picture</a></td>";
+									echo "<td><a href=\"../".$row['pic']."\">Open Picture</a></td>";
 									echo "<td>".$row['link']."</td>";
 									echo "<td><a href=\"removeEvent.php?table=events&id=".$row['id']."\">Remove</a></td>";
 									echo "</tr>";
