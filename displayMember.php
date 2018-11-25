@@ -53,16 +53,6 @@ if(!isset($_SESSION['admin'])){
                 </button>                 
                     <a class="navbar-brand" href="#">Members List</a>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="logout.php">
-                                <p>Log out</p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                </div>
             </div>
         </nav>
         <?php
