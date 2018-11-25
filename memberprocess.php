@@ -6,7 +6,7 @@
 	$mem_year = $_POST['year'];
 
 	$flag =0;
-	$url = "../img/board/";
+	$url = "img/board/";
 	$tfile = $_FILES["image"]["name"];
 	$tempname = $_FILES["image"]["tmp_name"];
 	$target_path = "../img/board/".$tfile;
