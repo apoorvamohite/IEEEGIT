@@ -11,7 +11,7 @@ if(!isset($_SESSION['admin'])){
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Admin Home</title>
+	<title>Light Bootstrap Dashboard by Creative Tim</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -53,6 +53,16 @@ if(!isset($_SESSION['admin'])){
                     </button>
                     <a class="navbar-brand" href="#">User</a>
                 </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right"					
+                        <li>
+                            <a href="logout.php">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+						<li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -66,7 +76,7 @@ if(!isset($_SESSION['admin'])){
                                 <h4 class="title">Edit Profile</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                <form method="post" action="changepass.php">
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
@@ -142,7 +152,7 @@ if(!isset($_SESSION['admin'])){
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Change Password</button>
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
@@ -183,7 +193,37 @@ if(!isset($_SESSION['admin'])){
         </div>
 
 
-        <?php require "footer.html"; ?>
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
+            </div>
+        </footer>
 
     </div>
 </div>
